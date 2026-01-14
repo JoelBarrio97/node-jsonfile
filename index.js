@@ -80,9 +80,13 @@ function writeFileSync (file, obj, options = {}) {
 
 // NOTE: do not change this export format; required for ESM compat
 // see https://github.com/jprichardson/node-jsonfile/pull/162 for details
+
+const write = writeFileSync;
+
 module.exports = {
   readFile,
   readFileSync,
   writeFile,
-  writeFileSync
+  writeFileSync,
+  write: writeFileSync,
 }
